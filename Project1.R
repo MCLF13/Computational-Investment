@@ -1,16 +1,24 @@
 #Habilita o pacote quantmod
 library(quantmod)
 library(matlab)
+library(xlsx)
 
 #Cria um novo ambiente para armazenar os dados
 stockData <- new.env() 
 
+#Le arquivo xlsx
+stockCode <- read.xlsx("/Users/marciuscorreialima/Desktop/Computational Investment/AtivosIndice.xlsx", sheetIndex=1)
+
+#Concatena .SA
+yahooCode <- paste(stockCode[,1], ".SA", sep="")
+
 #Especifica as datas de interesse
-startDate = as.Date("2010-01-01") 
-endDate = as.Date("2010-12-31")
+startDate = as.Date("2000-01-01") 
+endDate = as.Date("2012-12-31")
+
 
 #Obtêm os dados dos ativos
-ativos<-c("PETR4.SA")
+ativos<-c(yahooCode[1:70])
 getSymbols(ativos, src="yahoo",from=startDate,to=endDate)
 
 #Calcula log-retorno do preço de fechamento (close)
@@ -22,10 +30,10 @@ plot.xts(Cl(stockreturns),major.format="%b/%d/%Y",main="PETR4",ylab="Log-return 
 #Obtém o preço de mercado e calcula log-retorno
 market <- c("^BVSP")
 getSymbols(market, src="yahoo",from=startDate,to=endDate)
-marketreturns <- diff(log(BVSP[,4]))
+#marketreturns <- diff(log(BVSP[,4]))
 
 #Plota gráfico mercado
-plot.xts(Cl(marketreturns),major.format="%b/%d/%Y",main="Ibovespa",ylab="Log-return Close Price.",xlab="Time")
+#plot.xts(Cl(marketreturns),major.format="%b/%d/%Y",main="Ibovespa",ylab="Log-return Close Price.",xlab="Time")
 
 #Cria data frame para matriz de eventos
 
@@ -67,6 +75,6 @@ plot.xts(Cl(marketreturns),major.format="%b/%d/%Y",main="Ibovespa",ylab="Log-ret
 # $ Sector   : chr  "Health Care" "n/a" "Capital Goods" "Capital Goods" ...
 # $ Industry : chr  "Hospital/Nursing Management" "n/a" "Metal Fabrications" "Industrial Machinery/Components" ...
 # $ Exchange : chr  "AMEX" "AMEX" "AMEX" "AMEX" ...
-
-
-#TTR::stockSymbols()
+# 
+# 
+# TTR::stockSymbols()
