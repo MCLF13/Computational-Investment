@@ -7,7 +7,7 @@ library(xlsx)
 stockData <- new.env() 
 
 #Le arquivo xlsx
-stockCode <- read.xlsx("/Users/marciuscorreialima/Desktop/Computational Investment/AtivosIndice.xlsx", sheetIndex=1)
+stockCode <- read.xlsx("/Users/Luis/Documents/GitHub/Computational-Investment/AtivosIndice.xlsx", sheetIndex=1)
 
 #Concatena .SA
 yahooCode <- paste(stockCode[,1], ".SA", sep="")
@@ -18,7 +18,7 @@ endDate = as.Date("2012-12-31")
 
 
 #Obtêm os dados dos ativos
-ativos<-c(yahooCode[1:70])
+ativos<-c(yahooCode)
 getSymbols(ativos, src="yahoo",from=startDate,to=endDate)
 
 #Calcula log-retorno do preço de fechamento (close)
