@@ -10,22 +10,22 @@ stockData <- new.env()
 stockCode <- read.xlsx("/Users/Luis/Documents/GitHub/Computational-Investment/AtivosIndice.xlsx", sheetIndex=1)
 
 #Concatena .SA
-yahooCode <- paste(stockCode[,1], ".SA", sep="")
+yahooCode1 <- paste(stockCode[,1], ".SA", sep="")
+yahooCode <- yahooCode1[-71]
 
 #Especifica as datas de interesse
 startDate = as.Date("2000-01-01") 
 endDate = as.Date("2012-12-31")
-
 
 #Obtêm os dados dos ativos
 ativos<-c(yahooCode)
 getSymbols(ativos, src="yahoo",from=startDate,to=endDate)
 
 #Calcula log-retorno do preço de fechamento (close)
-stockreturns <- diff(log(PETR4.SA[,4]))
+#stockreturns <- diff(log(PETR4.SA[,4]))
 
 #Plota gráfico ação
-plot.xts(Cl(stockreturns),major.format="%b/%d/%Y",main="PETR4",ylab="Log-return Close Price.",xlab="Time")
+#plot.xts(Cl(stockreturns),major.format="%b/%d/%Y",main="PETR4",ylab="Log-return Close Price.",xlab="Time")
 
 #Obtém o preço de mercado e calcula log-retorno
 market <- c("^BVSP")
@@ -34,9 +34,6 @@ getSymbols(market, src="yahoo",from=startDate,to=endDate)
 
 #Plota gráfico mercado
 #plot.xts(Cl(marketreturns),major.format="%b/%d/%Y",main="Ibovespa",ylab="Log-return Close Price.",xlab="Time")
-
-#Cria data frame para matriz de eventos
-
 
 #Rolling Mean
 #a = rollmean(GOOG[,6], 20)
@@ -75,6 +72,5 @@ getSymbols(market, src="yahoo",from=startDate,to=endDate)
 # $ Sector   : chr  "Health Care" "n/a" "Capital Goods" "Capital Goods" ...
 # $ Industry : chr  "Hospital/Nursing Management" "n/a" "Metal Fabrications" "Industrial Machinery/Components" ...
 # $ Exchange : chr  "AMEX" "AMEX" "AMEX" "AMEX" ...
-# 
-# 
+
 # TTR::stockSymbols()
