@@ -1,4 +1,3 @@
-
 # Cria uma matriz da acao desejada
 Matriz = function(acao){
   temp = matrix(acao[,1])
@@ -17,19 +16,20 @@ Matriz = function(acao){
 }
 
 acoes = stockCode[,1]
-# nome = paste(acoes, "= Matriz(", ativos,")", sep = "")
+ nome = paste(acoes, "= Matriz(", ativos,")", sep = "")
 
-AEDU3= Matriz(AEDU3.SA) ; ALLL3= Matriz(ALLL3.SA) ; AMBV4= Matriz(AMBV4.SA); BBAS3= Matriz(BBAS3.SA) ; BBDC3= Matriz(BBDC3.SA) ; BBDC4= Matriz(BBDC4.SA)
-BISA3= Matriz(BISA3.SA) ; BRAP4= Matriz(BRAP4.SA) ; BRFS3= Matriz(BRFS3.SA) ; BRKM5= Matriz(BRKM5.SA) ; BRML3= Matriz(BRML3.SA) ; BRPR3= Matriz(BRPR3.SA)
-BTOW3= Matriz(BTOW3.SA  ; CCRO3= Matriz(CCRO3.SA) ; CESP6= Matriz(CESP6.SA) ; CIEL3= Matriz(CIEL3.SA) ; CMIG4= Matriz(CMIG4.SA) ; CPFE3= Matriz(CPFE3.SA)
-CPLE6= Matriz(CPLE6.SA) ; CRUZ3= Matriz(CRUZ3.SA) ; CSAN3= Matriz(CSAN3.SA) ; CSNA3= Matriz(CSNA3.SA) ; CTIP3= Matriz(CTIP3.SA) ; CYRE3= Matriz(CYRE3.SA)
-DASA3= Matriz(DASA3.SA) ; DTEX3= Matriz(DTEX3.SA) ; ELET3= Matriz(ELET3.SA) ; ELET6= Matriz(ELET6.SA) ; ELPL4= Matriz(ELPL4.SA) ; EMBR3= Matriz(EMBR3.SA)
-ENBR3= Matriz(ENBR3.SA) ; FIBR3= Matriz(FIBR3.SA) ; GFSA3= Matriz(GFSA3.SA) ; GGBR4= Matriz(GGBR4.SA) ; GOAU4= Matriz(GOAU4.SA) ; GOLL4= Matriz(GOLL4.SA)
-HGTX3= Matriz(HGTX3.SA) ; HYPE3= Matriz(HYPE3.SA) ; ITSA4= Matriz(ITSA4.SA) ; ITUB4= Matriz(ITUB4.SA) ; JBSS3= Matriz(JBSS3.SA) ; KLBN4= Matriz(KLBN4.SA)
-MRVE3= Matriz(MRVE3.SA) ; NATU3= Matriz(NATU3.SA) ; OIBR3= Matriz(OIBR3.SA) ; OIBR4= Matriz(OIBR4.SA) ; PCAR4= Matriz(PCAR4.SA) ; PDGR3= Matriz(PDGR3.SA)
-PETR3= Matriz(PETR3.SA) ; PETR4= Matriz(PETR4.SA) ; RENT3= Matriz(RENT3.SA) ; RSID3= Matriz(RSID3.SA) ; SANB11= Matriz(SANB11.SA) ; SBSP3= Matriz(SBSP3.SA)
-SUZB5= Matriz(SUZB5.SA) ; TIMP3= Matriz(TIMP3.SA) ; TRPL4= Matriz(TRPL4.SA) ; UGPA3= Matriz(UGPA3.SA) ; USIM3= Matriz(USIM3.SA) ; USIM5= Matriz(USIM5.SA)
-VAGR3= Matriz(VAGR3.SA) ; VALE3= Matriz(VALE3.SA) ; VALE5= Matriz(VALE5.SA) ; VIVT4= Matriz(VIVT4.SA)
+AEDU3= Matriz(AEDU3.SA); ALLL3= Matriz(ALLL3.SA); AMBV4= Matriz(AMBV4.SA); BBAS3= Matriz(BBAS3.SA); BBDC3= Matriz(BBDC3.SA); BBDC4= Matriz(BBDC4.SA)
+BISA3= Matriz(BISA3.SA); BRAP4= Matriz(BRAP4.SA); BRFS3= Matriz(BRFS3.SA); BRKM5= Matriz(BRKM5.SA); BRML3= Matriz(BRML3.SA); BRPR3= Matriz(BRPR3.SA)
+BTOW3= Matriz(BTOW3.SA); CCRO3= Matriz(CCRO3.SA); CESP6= Matriz(CESP6.SA); CIEL3= Matriz(CIEL3.SA); CMIG4= Matriz(CMIG4.SA); CPFE3= Matriz(CPFE3.SA)
+CPLE6= Matriz(CPLE6.SA); CRUZ3= Matriz(CRUZ3.SA); CSAN3= Matriz(CSAN3.SA); CSNA3= Matriz(CSNA3.SA); CTIP3= Matriz(CTIP3.SA); CYRE3= Matriz(CYRE3.SA)
+DASA3= Matriz(DASA3.SA); DTEX3= Matriz(DTEX3.SA); ELET3= Matriz(ELET3.SA); ELET6= Matriz(ELET6.SA); ELPL4= Matriz(ELPL4.SA); EMBR3= Matriz(EMBR3.SA)
+ENBR3= Matriz(ENBR3.SA); FIBR3= Matriz(FIBR3.SA); GFSA3= Matriz(GFSA3.SA); GGBR4= Matriz(GGBR4.SA); GOAU4= Matriz(GOAU4.SA); GOLL4= Matriz(GOLL4.SA)
+HGTX3= Matriz(HGTX3.SA); HYPE3= Matriz(HYPE3.SA); ITSA4= Matriz(ITSA4.SA); ITUB4= Matriz(ITUB4.SA); JBSS3= Matriz(JBSS3.SA); KLBN4= Matriz(KLBN4.SA)
+LAME4= Matriz(LAME4.SA); LIGT3= Matriz(LIGT3.SA); LLXL3= Matriz(LLXL3.SA); LREN3= Matriz(LREN3.SA); MMXM3= Matriz(MMXM3.SA); MRFG3= Matriz(MRFG3.SA)
+MRVE3= Matriz(MRVE3.SA); NATU3= Matriz(NATU3.SA); OIBR3= Matriz(OIBR3.SA); OIBR4= Matriz(OIBR4.SA); PCAR4= Matriz(PCAR4.SA); PDGR3= Matriz(PDGR3.SA)
+PETR3= Matriz(PETR3.SA); PETR4= Matriz(PETR4.SA); RENT3= Matriz(RENT3.SA); RSID3= Matriz(RSID3.SA); SANB11= Matriz(SANB11.SA); SBSP3= Matriz(SBSP3.SA)
+SUZB5= Matriz(SUZB5.SA); TIMP3= Matriz(TIMP3.SA); TRPL4= Matriz(TRPL4.SA); UGPA3= Matriz(UGPA3.SA); USIM3= Matriz(USIM3.SA); USIM5= Matriz(USIM5.SA)
+VAGR3= Matriz(VAGR3.SA); VALE3= Matriz(VALE3.SA); VALE5= Matriz(VALE5.SA); VIVT4= Matriz(VIVT4.SA)
 
 
 label = function(acao)  # Colocar label nas matrizes
@@ -164,6 +164,6 @@ ACOES = Geral(ACOES, VAGR3); ACOES = Geral(ACOES, VALE3); ACOES = Geral(ACOES, V
 
 data = label(SBSP3.SA) ; rownames(ACOES) = data # Colaca Label
 
-require(xlsx)
-write.xlsx(ACOES, "/Users/Luis/Desktop/Ações.xlsx")
-write.csv(ACOES, "/Users/Luis/Desktop/Ações.csv")
+# require(xlsx)
+# write.xlsx(ACOES, "/Users/Luis/Desktop/Ações.xlsx")
+# write.csv(ACOES, "/Users/Luis/Desktop/Ações.csv")
