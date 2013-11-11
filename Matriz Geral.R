@@ -1,3 +1,4 @@
+library(matlab)
 # Cria uma matriz da acao desejada
 Matriz = function(acao){
   temp = matrix(acao[,1])
@@ -163,7 +164,22 @@ ACOES = Geral(ACOES, TIMP3); ACOES = Geral(ACOES, TRPL4); ACOES = Geral(ACOES, U
 ACOES = Geral(ACOES, VAGR3); ACOES = Geral(ACOES, VALE3); ACOES = Geral(ACOES, VALE5); ACOES = Geral(ACOES, VIVT4)
 
 data = label(SBSP3.SA) ; rownames(ACOES) = data # Colaca Label
+ACAO =c()
+for (i in 1:size(ACOES,2))
+{
+  A = as.numeric(ACOES[,i])
+  ACAO = cbind(ACAO, A)
+}
+
+colname = rep(acoes, each = 6)
+colname = paste(colname,colnames(ACOES))
+colnames(ACAO) = colname
+
+ACOES = ACAO
+rm(ACAO)
 
 # require(xlsx)
-# write.xlsx(ACOES, "/Users/Luis/Desktop/Ações.xlsx")
-# write.csv(ACOES, "/Users/Luis/Desktop/Ações.csv")
+# write.xlsx(ACOES, "/Users/Luis/Desktop/Acoes.xlsx")
+write.csv(COR, "C:/Users/b2476514/Desktop/Acoes.csv")
+
+write.table(COR, "C:/Users/b2476514/Desktop/Acoes.txt")
