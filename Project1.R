@@ -10,8 +10,7 @@ stockData <- new.env()
 stockCode <- read.xlsx("/Users/Luis/Documents/GitHub/Computational-Investment/AtivosIndice.xlsx", sheetIndex=1)
 
 #Concatena .SA
-yahooCode1 <- paste(stockCode[,1], ".SA", sep="")
-yahooCode <- yahooCode1[-71]
+yahooCode <- paste(stockCode[,1], ".SA", sep="")
 
 #Especifica as datas de interesse
 startDate = as.Date("2000-01-01") 
